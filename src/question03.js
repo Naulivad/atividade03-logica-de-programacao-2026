@@ -1,7 +1,11 @@
 import leia from "readline-sync"
 
-for(var i = 0; i < 3; i++){
-    
+var gaso = 0
+var eta = 0
+var dise = 0
+var abastecimentos = leia.questionInt("Quantos abastecimentos seras registrados: ")
+for(var i = 0; i < abastecimentos; i++){
+
     console.log("1 - Gasolina")
     console.log("2 - Etanol")
     console.log("3 - Diesel")
@@ -16,22 +20,28 @@ for(var i = 0; i < 3; i++){
     }
     else if(opcao === 1) {
     
-        valorFinal += 20
-        console.log("Hambúrguer adicionado ao pedido! ")
+        valorFinal += 6,20
+        console.log(" + gasolina ")
         qtd ++
+        gaso ++
     }else if(opcao === 2){
     
-        valorFinal += 15
-        console.log("Cachorro-quente adicionado ao pedido! ")
+        valorFinal += 4,30
+        console.log(" + etanol ")
     
         qtd ++
+        eta ++
     }else if(opcao === 3){
     
-        valorFinal += 7
-        console.log("Refrigerante adicionado ao pedido! ")
+        valorFinal += 5,90
+        console.log(" + disel")
         qtd ++
+        dise ++
     }
     
     
 }
-var abastecimentos = leia.questionInt("Quantos abastecimentos seras registrados: ")
+
+console.log("Quantidade de abastecimentos com gasolina: " + gaso    )
+console.log("Quantidade de abastecimentos com etanol: " + eta)
+console.log("Quantidade de abastecimentos com disel: " + dise)
